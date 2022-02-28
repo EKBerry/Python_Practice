@@ -6,8 +6,20 @@ from time import sleep
 
 
 
+<<<<<<< HEAD
 
 def start_up():
+=======
+         base_macro = [keyboard.write('hi'), 
+                       sleep(1), keyboard.send('enter'), 
+                       sleep(1), keyboard.write('How are you?'),
+                       sleep(1), keyboard.send('enter')]
+         return base_macro
+# What starts the entire program. If you agree you
+# get prompted and begin the text_spam.
+def agreement():
+    # Don't use this to be harmful.
+>>>>>>> 33c9a179246c77e3b292b6ee11f4275d599d3dcb
     print(
         """This program is intended for joke purposes and is 
 not meant to be used for any trolling purposes""")
