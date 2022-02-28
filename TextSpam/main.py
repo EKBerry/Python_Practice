@@ -10,7 +10,9 @@ from time import sleep
 # Will style later
 def initiate(base_macro):
 
-         base_macro = [keyboard.write('hi'), sleep(1), keyboard.send('enter'), sleep(1), keyboard.write('How are you?'),
+         base_macro = [keyboard.write('hi'), 
+                       sleep(1), keyboard.send('enter'), 
+                       sleep(1), keyboard.write('How are you?'),
                        sleep(1), keyboard.send('enter')]
          return base_macro
 # What starts the entire program. If you agree you
