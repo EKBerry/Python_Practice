@@ -29,33 +29,28 @@ not meant to be used for any trolling purposes""")
     # Making sure that the answer is an INT and not a letter
     agreement_answer = int(agreement_answer)
     #This is in case someone puts a letter inside the prompt.
-    if agreement_answer == 0 or 1:
-        if agreement_answer == 1:
-            # 0 or 1 are the only acceptable answers
-            repeat = input('How many times would you like this repeated? (2-10 recommend): ')
-            repeat = int(repeat)
-            # runs through the main program.
-            text_spam(repeat)
-        # For now the programs will just end.
-        elif agreement_answer == 0:
-            print('Sorry.')
-            exit()
 
-        else:
-            print('no you do not.')
-            exit()
+    if agreement_answer == 1:
+        # 0 or 1 are the only acceptable answers
+        repeat = input('How many times would you like this repeated? (2-10 recommend): ')
+        repeat = int(repeat)
+        # runs through the main program.
+        text_spam(repeat)
+    # For now the programs will just end.
+    elif agreement_answer == 0:
+        print('Sorry.')
+        exit()
+    # This only happens if a letter or 3< is put in
     else:
         print('no you do not.')
         exit()
-# def prompt():
-#     number = input('Enter a number')
-#     number = int(number)
-#     textSpam(number)
+
+
 def text_spam(time):
-    i = 0
+    # Set variable to assign later.
     base = []
 
-    for i in range(time):
+    for i in range(time+1):
         if i <= 0:
             print('5 seconds.')
             sleep(5.00)
