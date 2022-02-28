@@ -11,11 +11,8 @@ from time import sleep
 def initiate(base_macro):
 
          base_macro = [keyboard.write('hi'), sleep(1), keyboard.send('enter'), sleep(1), keyboard.write('How are you?'),
-                       sleep(1)]
+                       sleep(1), keyboard.send('enter')]
          return base_macro
-
-
-
 # What starts the entire program. If you agree you
 # get prompted and begin the text_spam.
 def agreement():
@@ -50,7 +47,6 @@ not meant to be used for any trolling purposes""")
     else:
         print('no you do not.')
         exit()
-
 # def prompt():
 #     number = input('Enter a number')
 #     number = int(number)
@@ -61,18 +57,11 @@ def text_spam(time):
 
     for i in range(time):
         if i <= 0:
-
             print('5 seconds.')
             sleep(5.00)
+        else:
             initiate(base)
-
-
-
-
-
-
-
-
+            i += 1
 
 
 agreement()
